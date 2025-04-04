@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BotonComponent } from "../boton/boton.component";
 
 @Component({
@@ -8,10 +8,16 @@ import { BotonComponent } from "../boton/boton.component";
   templateUrl: './mi-datos.component.html',
   styleUrl: './mi-datos.component.scss'
 })
-export class MiDatosComponent {
+export class MiDatosComponent implements OnInit  {
 
-  nombre: string = 'Juan Pérez';
+  ngOnInit(): void {
+    console.log('Componente MiDatosComponent inicializado');
+    this.nombre = 'Juan Pérez';
+  }
+
+  nombre: string ="";
   edad: number = 30;
   profesion: string = 'Desarrollador de Software';
   ciudad: string = 'Madrid';
+
 }

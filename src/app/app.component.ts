@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MiDatosComponent } from './componentes/mi-datos/mi-datos.component';
 import { BotonComponent } from "./componentes/boton/boton.component";
+import { MiClase } from './clases/mi-clase';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,8 @@ export class AppComponent {
   numero1: number = 0;  
   numero2: number = 0;
   resultado: number = 0;
+  usuarios: MiClase[] = [];
+
 
   calcular() {
     this.resultado = this.numero1 + this.numero2;
